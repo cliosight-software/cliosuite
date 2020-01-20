@@ -1,3 +1,4 @@
+## Author: Jigisha Aryya, email: cliosight@gmail.com, website: https://cliosight.com
 import re
 from bs4 import BeautifulSoup as BeautifulSoup
 import urllib2
