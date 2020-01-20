@@ -1,4 +1,5 @@
 ## Author: Jigisha Aryya, email: cliosight@gmail.com, website: https://cliosight.com
+## Please install python and mysql and create the database manually before using this script. You can modify this for a different use case
 import re
 from bs4 import BeautifulSoup as BeautifulSoup
 import urllib2
