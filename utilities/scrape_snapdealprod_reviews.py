@@ -1,5 +1,6 @@
 ## Author: Jigisha Aryya, email: cliosight@gmail.com, website: https://cliosight.com
 ## Please install python3 before running the script as python3 scrape_snapdealprod_reviews.py <url_of_a_snapdeal_product>
+## Blog: https://cliosight.com/f/scrapping-web-data-with-python-for-your-ideas-and-experiments
 
 import re
 import bs4 as bs4
