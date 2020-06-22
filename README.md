@@ -8,7 +8,7 @@ currently being developed, will also have exclusive articles for paid members.
 
 Our first open-source project is a simple demonstration of express js, mysql, node js, bootstrap, HTML and CSS technologies 
 to create a product introduction and registration web app.
-Instead of creating a single application for both the main project and the introduction, we have decided to 
+Instead of creating a single application for both the main project and the introduction part, we have decided to 
 keep it seperate, and collect survey data and other information from the users exclusively through this simple web application.
 
 The main project source code will be shared later, once we have reached a particular count of interested users.
