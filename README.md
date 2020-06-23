@@ -6,7 +6,7 @@ apllication areas, they can directly surf through our code projects and articles
 The domain related articles are shared regularly through the <a href="https://cliosight.com/1000-ideas">cliosight.com blog</a> section. The Cliosuite MSME web application 
 currently being developed, will also have exclusive articles for paid members.
 
-Our first open-source project is a simple demonstration of express js, mysql, node js, bootstrap, HTML and CSS technologies 
+Our first project is a simple demonstration of express js, mysql, node js, bootstrap, HTML and CSS technologies 
 to create a product introduction and registration web app, adopted from the article https://www.w3jar.com/node-js-login-and-registration-system-with-express-js-and-mysql/ with some UI modifications.
 Instead of creating a single application for both our main project and the introduction part, we have decided to 
 keep it seperate, and collect survey data and other information from the users exclusively through this simple web application.
