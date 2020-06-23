@@ -15,5 +15,9 @@ The main project source code will be shared later, once we have reached a partic
 Please donate to help us complete this significantly large project that will smoothen the lives of student developers, professional developers, freelancers, business consultants and MSMEs sail through the pandemic.
 Please visit our website https://cliosight.com for more.
 
-Click the project logo image below to donate:
+Indian Patrons, click the project logo below to donate:
 <a href="https://rzp.io/l/pnH5Xs3"><img src="https://isteam.wsimg.com/ip/2b686ac9-9aec-461e-830c-6306813e4be1/newlogo.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,h:300,cg:true" alt="cliosuite" style="float: left; margin-right: 10px;" /></a>
+
+
+<h3><b>International Patrons, please donate using the link below:</b></h3>
+https://ko-fi.com/jigishaaryya
