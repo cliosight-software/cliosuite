@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Cliosuite for MSME</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cliosuite Login Or SignUp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+  	<script src="https://smtpjs.com/v3/smtp.js"></script>  
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<style>
+  .footer_clio {
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    float: bottom;
+    text-align: center;
+  }
+  
+  .form-large{
+	    font-size: 20px;
+	    padding-top: 15px;
+	    padding-bottom: 15px;
+	    padding-left: 15px;
+	    padding-right: 15px;
+	    line-height: normal;
+	}
+
+	.form-large input, .form-large  button{
+	    font-size:20px;
+	    padding: 15px;
+	    height: auto;
+	    line-height: normal;
+	}
+	
+	
+div, h2, form{
+	color:grey;
+	font-family:optima;
+}
+
+p{
+	color:grey;
+	font-family:optima;
+}
+  </style>
+
+
+<body style="background-color: white; background-image: url('/static/bg1.jpg');">
+  <br/>
+  
+  <div style="display: flex; justify-content: center; " id="top">
+  <a href="/"><img src="/static/newlogo.jpg" style="width:250px; height:70px; border-color:yellow; border-width:2px;"/></a>
+  </div>
+
+  <div class="container">
+  <div class="row justify-content-center">
+   <div class="col bg-default bg-default py-1" style="display: flex; justify-content: center; margin-bottom:0px;margin-left:0px;">
+  <h4><b>The One-Stop Solution for Micro, Small & Mid-Sized Enterprises</b></h4>
+  </div>
+  </div>
+  </div>
+ <br/>
+ 
+  <div class="card" style="width:100%; border-width:1px; background-color: #D1F2EB; border-color:#D1F2EB; border-radius:0px;" >
+    <div class="card-body">
+    
+    <div style="display: flex; justify-content: center; height:50px;background-color: #D1F2EB; border-color:#D1F2EB;" class="row-md-12">
+    
+    <button onclick="window.open('/documentation')" type="button" class="btn btn-link col-md-2"><font size="5">Docs</font></button>
+    <button onclick="window.open('https://cliosight.com/1000-ideas')" type="button" class="btn btn-link col-md-2"><font size="5">Blog</font></button>
+	<button onclick="window.location='#explore'" type="button" class="btn btn-link col-md-2"><font size="5">Explore</font></button>
+	<button onclick="window.open('/about')" type="button" class="btn btn-link col-md-2"><font size="5">About</font></button>
+	
+    </div>
+    </div>
+    </div>
+<div class="row" style="margin-left:0px;margin-right:0px;">
+<img style="width:100%;height:200%;" src='/static/header.jpg' />
+</div>
+<br/>
+<br/>
+<div class="container" id="login">
+<p style="display: flex; justify-content: center;padding:10px;" class="col-lg-12 control-label"> <font color="#23bacf" size="7">Let's Get Introduced</font></p>
+<div class="card" style="width:100%; height:100%;border-width:2px; border-color:#23bacf; border-radius:10px;" >
+<div class="card-body">
+        <div class="row-lg-12 justify-content-center" style="border-color:skyblue;">
+            <div class="col-lg-6 bg-default bg-white py-4" style="margin-bottom:10px;border-color:#23bacf;">
+           
+			<h2 class="text-center" style="color: #23bacf; font-family:optima">Already Registered?</h2><h2 style="color: #23bacf; ; font-family:optima;justify-content:center; display:flex;"> Login for status</h2>
+                  <hr style="border-color:  #23bacf; border-width:1px;">
+                    
+                    <% if (locals.login_errors) { 
+                      login_errors.forEach(function(error_msg){ %>
+                      <div class="alert alert-danger" role="alert"><%= error_msg %></div>
+                    <% });
+                    } %>
+                <form action="/login" method="POST" class="form-horizontal form-large">
+                    <div class="form-group">
+                      <label for="_email">Email</label>
+                      <input type="text" name="user_email" id="_email" class="form-control form-large" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="_pass">Password</label>
+                      <input type="password" name="user_pass" id="_pass" class="form-control form-large" placeholder="Password" required>
+                    </div>
+           
+                    <div class="row" style="display: flex; justify-content: center;">
+                    <button style="width:100%; margin-top:0px; height:71px; border-color: white; border-width:2px; display: flex; justify-content: center; " type="submit" class="btn btn-info btn-lg btn-block btn-huge"><font size="6px" color="white">LOGIN</font></button>
+                	</div>
+                </form>
+                <hr style="border-color: lightgrey">
+                <br/>
+                
+                <div class="row" style="display: flex; justify-content: center;margin-left:0px;margin-right:0px;">
+                <p style="font-size:30px;color:#23bacf"><b>Manage All Businesses at One Place!</b></p>
+                </div>
+                
+                <div class="row" style="display: flex; justify-content: center;margin-left:0px;margin-right:0px;">
+                <button onclick="window.open('https://cliosight.com/customized-solutions')" style="width:100%; height:100px; background-color:white; border-color: #23bacf; border-width:2px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color=#23bacf size="5"><b>Customizable App</b></font></button>
+                </div>
+                
+                <div class="row" style="display: flex; justify-content: center;margin-left:0px;margin-right:0px;">
+                <button onclick="window.open('/#techstack','_self')" style="width:100%; height:100px; background-color:white; border-color: #23bacf; border-width:2px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color=#23bacf size="5"><b>Popular Technologies</b></font></button>
+                </div>
+                
+                <div class="row" style="display: flex; justify-content: center;margin-left:0px;margin-right:0px;">
+                <button onclick="window.open('https://cliosight.com/retail-and-crm-solutions')" style="width:100%; height:100px; background-color:white; border-color: #23bacf; border-width:2px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color=#23bacf size="5"><b>Multiple Models</b></font></button>
+                </div>
+                
+                <div class="row" style="display: flex; justify-content: center;margin-left:0px;margin-right:0px;">
+                <button onclick="window.open('/cliobuilder')" style="width:100%; height:100px; background-color:white; border-color: #23bacf; border-width:2px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color=#23bacf size="5"><b>Role-Based Visual Data</b></font></button>
+                </div>
+                <div class="row" style="display: flex; justify-content: center;margin-left:0px;margin-right:0px;">
+                <button onclick="window.open('https://cliosight.com')" style="width:100%; height:100px; background-color:white; border-color: #23bacf; border-width:2px; margin-bottom:20px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color=#23bacf size="5"><b>Partially Open-Source</b></font></button>
+                </div>
+                <br/>
+                <div class="row" style="display: flex; justify-content: center;margin-top:0px;margin-right:0px;">
+                <label style="font-size:25px;color:black">Developed By Cliosight</label>
+                </div>
+                <br/>
+                <div class="row" style="display: flex; justify-content: center;margin-left:0px;margin-bottom:0px;">
+                 <a href="https://cliosight.com"><img src="/static/logo.jpg" style="width:300px; height:295px; border-color:yellow; border-width:2px;"/></a>
+                </div>
+                
+                </div>
+           
+            <div class="col-lg-6 bg-white py-4 offset-lg-0" style="border-color:#23bacf;">
+            
+                
+                <h2 class="text-center" style="color:#23bacf; font-family:optima">Get Boilerplate Code.</h2><h2 style="color: #23bacf; ; font-family:optima;justify-content:center; display:flex;" >Register Today!</h2>
+				<hr style="border-color:  #23bacf; border-width:1px;">
+                <form action="/register" method="POST" class="form-horizontal form-large" novalidate>
+                        <div class="form-group">
+                          <label for="_rname">First Name</label>
+                          <input type="text" name="user_name" id="_rname" class="form-control" placeholder="First Name" value="<%= (locals.old_data) ? old_data.user_name : ''; %>" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="_rpass">Last Name</label>
+                          <input type="text" name="user_last_name" id="_rlname" class="form-control" placeholder="Last Name" value="<%= (locals.old_data) ? old_data.user_last_name : ''; %>" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="_remail">Email</label>
+                          <input type="email" name="user_email" id="_remail" class="form-control" placeholder="Email" value="<%= (locals.old_data) ? old_data.user_email : ''; %>" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="_rpass">Password</label>
+                          <input type="password" name="user_pass" id="_rpass" class="form-control" placeholder="Password" required>
+                        </div>
+                        
+                        <div class="form-group">
+                       	
+                          <label for="_mobile">Mobile Number</label>
+  				  
+     <select class="form-control form-large" style="margin-bottom:15px; height:55px; border-color:lightgrey; border-width:1px; background-color:white; font-size:20px; font-color:grey" name="user_country_std" id="rCountrySTD">
+     	<option data-rCountrySTD="IN" value="91" Selected>India (+91)</option>
+     	<option data-rCountrySTD="US" value="1">USA (+1)</option>
+     	<option data-rCountrySTD="CA" value="1">Canada (+1)</option>
+     	<option data-rCountrySTD="GB" value="44">UK (+44)</option>
+     	<option data-rCountrySTD="AU" value="61">Australia (+61)</option>
+     	<option data-rCountrySTD="SG" value="65">Singapore (+65)</option>
+     	<option data-rCountrySTD="MY" value="60">Malaysia (+60)</option>
+     	<option data-rCountrySTD="HK" value="852">Hong Kong (+852)</option>
+     	<option data-rCountrySTD="TH" value="66">Thailand (+66)</option>
+     	<option data-rCountrySTD="ID" value="62">Indonesia (+62)</option>
+     	<option data-rCountrySTD="PH" value="63">Philippines (+63)</option>
+     </select>
+           <input type="number" name="user_mobile" id="_rmobile" class="form-control form-large" placeholder="Mobile Number" value="<%= (locals.old_data) ? old_data.user_mobile : ''; %>" required>
+       </div>                        
+                        
+          <div class="form-group">
+                          <label for="_rbusinessname">Legal Business Name</label>
+                          <input type="text" name="user_business_name" id="_rbusinessname" class="form-control form-large" placeholder="Organization (optional)" value="<%= (locals.old_data) ? old_data.user_business_name : ''; %>" required>
+ 		</div>              
+                        
+         <div class="form-group">
+                          <label for="_rbusinessidentifier">Legal Business Identifier</label>
+                          <input type="text" name="user_business_identifier" id="_rbusinessidentifier" class="form-control form-large" placeholder="GSTIN/FTIN/BIN (optional)" value="<%= (locals.old_data) ? old_data.user_business_identifier : ''; %>" required>
+         </div>               
+                        
+         <div class="form-group">
+                          <label for="_rbusinessaddress">Legal Business Address</label>
+                          <input type="text" name="user_business_address" id="_rbusinessaddress" class="form-control form-large" placeholder="Business Address (optional)" value="<%= (locals.old_data) ? old_data.user_business_address : ''; %>" required>
+         </div>       
+         
+         <div class="form-group">
+                          <label for="_rzipcode">Zipcode</label>
+                          <input type="number" name="user_zipcode" id="_rzipcode" class="form-control form-large" placeholder="Zipcode" value="<%= (locals.old_data) ? old_data.user_zipcode : ''; %>" required>
+         </div>
+         
+         <div class="form-group">
+                       <label for="rcountrycode">Country Code</label>
+                        <select type="text" name="user_country_code" id="rcountrycode" class="form-control" placeholder="Country Code" style="height:55px; border-color:lightgrey; border-width:1px; background-color:white; font-size:20px; font-color:grey" value="<%= (locals.old_data) ? old_data.user_country_code : ''; %>" required>
+         				<option value="IN" Selected>India (IN)</option>
+         				<option value="SG">Singapore (SG)</option>
+         				<option value="HK">Hong Kong (HK)</option>
+         				<option value="MY">Malaysia (MY)</option>
+         				<option value="TH">Thailand (TH)</option>
+         				<option value="PH">Philippines (PH)</option>
+         				<option value="KS">South Korea (KS)</option>
+         				<option value="JP">Japan (JP)</option>
+         				<option value="CA">Canada (CA)</option>
+         				<option value="US">United States of America (US)</option>
+         				<option value="UK">United Kingdom (UK)</option>
+         				<option value="AU">Australia (AU)</option>
+         				<option value="NZ">New Zealand (NZ)</option>
+         				<option value="SA">South Africa (SA)</option>
+         				<option value="NG">Nigeria (NG)</option>
+         				<option value="KY">Kenya (KY)</option>
+         				<option value="GB">Gabon (GB)</option>
+         				<option value="EE">Estonia (EE)</option>
+         				<option value="FR">France (FR)</option>
+         				<option value="ES">Spain (ES)</option>
+         				<option value="DE">Germany (DE)</option>
+         				<option value="DK">Denmark (DK)</option>
+         				<option value="FI">Finland (FI)</option>
+         				<option value="MX">Mexico (MX)</option>
+         				<option value="BR">Brazil (BR)</option>
+        				</select>
+         </div> 
+         
+         <div class="form-group">
+                          <label for="_rusertype">Choose Your Role</label>
+                          <select type="text" name="user_type" id="_rusertype" class="form-control form-large" placeholder="Business Role" style="height:60px; margin-bottom:0px; border-color:lightgrey; border-width:1px; background-color:white; font-size:20px; font-color:grey" value="<%= (locals.old_data) ? old_data.user_type : ''; %>" required>
+         					<option data-_rusertype="Explorer" value="Explorer" Selected>I am exploring</option>
+         					<option data-_rusertype="Admin" value="Admin">Business Admin</option>
+     						<option data-_rusertype="Manager" value="Manager">Business Manager</option>
+     						<option data-_rusertype="Employee" value="Employee">Business Employee</option>
+     						
+        					</select>
+         
+         </div>   
+         
+         			<div class="form-group">
+                          <label for="_rzipcode">Average Item Price</label>
+                          <input type="number" name="user_ticket_size" id="_rticket" class="form-control form-large" placeholder="Avg. Item Price (optional)" value="<%= (locals.old_data) ? old_data.user_ticket_size : ''; %>" />
+        			 </div>
+        
+                        <% if (locals.register_error) { 
+                          register_error.forEach(function(error_msg){ %>
+                          <div class="alert alert-danger" role="alert"><%= error_msg %></div>
+                        <% });
+                        } %>
+                        <div class="row" style="display: flex; justify-content: center;margin-top:20px;">
+                    	<button style=" width:100%; height:75px; border-color: #23bacf; border-width:2px;background-color: #23bacf;" type="submit" class="btn btn-info btn-lg btn-block btn-huge"><font size="6px" color="white">REGISTER</font></button>
+                		</div>
+                    </form>
+					</div>
+					</div>
+            </div>
+        </div>
+        <br/>
+        <div class="row" style="justify-content:center;display: flex;">
+  		<div class="col-md-2">
+		<a href="#top"><button class="btn btn-link" style="width:100%;"><font size="6" color="#23bacf"><b>Top</b></font></button></a>
+  </div> 
+  </div>  
+    </div>
+<br/>
+
+<div class="container" id="explore">
+
+<div class="row" style="margin:10px;display: flex; justify-content: center;">
+<p style="display: flex; justify-content: center;" class="col-lg-12 control-label"> <font color="#23bacf" size="7">Explore Cliosuite</font></p>
+</div>
+
+<div class="row-md-12" style="display: flex; justify-content: center;margin-bottom:0px;">
+<div class="card" style="border-color:skyblue; border-width:2px; border-radius:10px;background-color: #fffff5; padding:30px;">
+<div class="card-body">    
+       
+<div style="display: flex; justify-content: center;margin-bottom:0px;">
+<p style="display: flex; justify-content: center; font-weight:italic;" class="control-label"> <font color="#23bacf" size="6">ON DEMAND</font></p>
+</div>
+
+<div  style=";display: flex; justify-content: center;" class="row">
+
+<div class="col" style=";display: flex; justify-content: center;">
+	<button onclick="window.open('/prodsvc')" style="width:320px; height:100px; background-color:#4de3d3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b>Goods & Services</b></font></button>
+</div>
+
+<div class="col" style=";display: flex; justify-content: center;">
+<button onclick="window.open('/pripromos')" style="width:320px; height:100px; background-color:#4ddae3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b>Pricing & Promos</b></font></button>
+</div>
+
+<div class="col" style=";display: flex; justify-content: center;">
+<button onclick="window.open('/websupport')" style="width:320px; height:100px; background-color:#4de3d3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b>Calls & Orders</b></font></button>
+</div>
+</div>
+
+<div  style=";display: flex; justify-content: center;" class="row">
+<div class="col" style=";display: flex; justify-content: center;">
+<button onclick="window.open('/cliobuilder')" style="width:320px; height:100px; background-color:#4ddae3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b> Builder</b></font></button>
+</div>
+
+<div class="col" style=";display: flex; justify-content: center;">
+<button onclick="window.open('/invlog')" style="width:320px; height:100px; background-color:#4de3d3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b>Inventory</b></font></button>
+</div>
+
+<div class="col" style=";display: flex; justify-content: center;">
+<button onclick="window.open('/marketing')" style="width:320px; height:100px; background-color:#4ddae3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b>Marketing</b></font></button>
+</div>
+</div>
+
+<div  style=";display: flex; justify-content: center;" class="row">
+<div class="col" style=";display: flex; justify-content: center;">
+<button onclick="window.open('/stores')" style="width:320px; height:100px; background-color:#4de3d3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b>Store & FC</b></font></button>
+</div>
+
+<div class="col" style=";display: flex; justify-content: center;">
+<button onclick="window.open('/reports')" style="width:320px; height:100px; background-color:#4ddae3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b>Reports</b></font></button>
+</div>
+
+
+<div class="col" style=";display: flex; justify-content: center;">
+<button onclick="window.open('/files')" style="width:320px; height:100px; background-color:#4de3d3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b>File & Data</b></font></button>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<br/>
+
+<div class="container" id="techstack">
+<div class="row">
+<div class="col-md-7" style="margin-top:10px; ">
+<div class="card" style="width:100%; height:100%;border-width:2px; border-color:skyblue; border-radius:10px;background-color: white" >
+<div class="card-body">
+<img style="width:100%;height:100%;border-width:2px; border-color:skyblue;padding:2px;" src='/static/wcc.jpeg' />
+</div>
+</div>
+</div>
+
+<div class="col-md-5" style="margin-top:10px;">
+<div class="card" style="width:100%; height:100%;border-width:2px; border-color:skyblue; border-radius:10px; background-color:#fffff5" >
+<div class="card-body">
+<br/><br/><p style="color:#2295db; font-size:32px; font-weight: oblique; font-family:optima">- Multidisciplinary</p>
+<p style="color:#2295db; font-size:32px; font-weight: oblique; font-family:optima">- Rapidly Evolving</p>
+<p style="color:#2295db; font-size:32px; font-weight: oblique; font-family:optima">- Loosely Coupled</p>
+<p style="color:#2295db; font-size:32px; font-weight: oblique; font-family:optima">- Browser-Based</p>
+<p style="color:#2295db; font-size:32px; font-weight: oblique; font-family:optima">- Use of Open-Source</p>
+<p style="color:#2295db; font-size:32px; font-weight: oblique; font-family:optima">- Varied Complexities</p>
+<p style="color:#2295db; font-size:32px; font-weight: oblique; font-family:optima">- Relevant Use-Cases</p>
+<p style="color:#2295db; font-size:32px; font-weight: oblique; font-family:optima;">- Clear Explanations</p>
+<p style="color:#2295db; font-size:32px; font-weight: oblique; font-family:optima;">- Multiple Scenarios</p>
+<p style="color:#2295db; font-size:32px; font-weight: oblique; font-family:optima;">- Top Frameworks</p>
+<br/>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<br/>
+
+<div class="container">
+    <div class="row" style="display: flex; justify-content: center; ">
+		<div class="col-md-7" style="margin-bottom:10px;">
+		<button  onclick="window.open('https://github.com/cliosight-software/cliosuite')" style=" width:100%; height:75px; border-color: #23bacf; border-width:2px;background-color: #23bacf;" class="btn btn-primary btn-lg btn-block btn-huge"><font color="white" size="6">GITHUB REPO</font></button>
+		</div>
+<div class="col-md-5" style=";display: flex; justify-content: center;" >
+		<button  onclick="window.location='#top'" style=" width:100%; height:75px; border-color: #23bacf; border-width:2px;background-color: #23bacf;" class="btn btn-primary btn-lg btn-block btn-huge"><font color="white" size="6">BACK TO TOP</font></button>
+</div> 
+  </div>  
+
+</div>
+<br/>
+<div class="footer_clio row" id="footer_clio" name="footer_clio" style="display: flex; justify-content: center; background-color: #D1F2EB;margin-left:0px;margin-right:0px;padding-top:20px;padding-bottom:20px;">
+
+<div class="col-md-3">
+<h3>Links</h3>
+<h4><a href="http://cliosight.com">Company Website</a></h4>
+<h4><a href="https://www.linkedin.com/company/14571342">Linkedin</a></h4>
+</div>
+
+<div class="col-md-3">
+<h3>Learn about the project</h3>
+<h4><a href="/documentation">Documentation</a></h4>
+<h4><a href="https://cliosight.com/cliosuite-articles-1">Cliosuite Articles</a></h4>
+</div>
+
+<div class="col-md-4">
+<h3>Contact Us</h3>
+<h4>Mobile: +91-6361789254</h4>
+<h4><a>cliosight@gmail.com</a></h4>
+<h4>Address: Bangalore-560076, Karnataka, India</h4>
+</div>
+</div>
+<br/>
+
+</div>      
+</div>
+  
+  <div class="footer_clio" id="footer_clio" name="footer_clio" style="display: flex; justify-content: center; ">
+    <button type="button" class="btn btn-link" onclick="window.open('/about')"><font size="4">About</font></button>
+    <button type="button" class="btn btn-link" onclick="window.open('/policies')"><font size="4"> Policies & Terms </font></button>
+    <br/>
+  </div>
+  
+  <div class="container" style="display: flex; justify-content: center; ">
+      <p><font size="4" color="grey">Copyright © 2020 Cliosight - All Rights Reserved.</font></p>
+    </div>  
+  <br/>
+  
+</body>
+</html>

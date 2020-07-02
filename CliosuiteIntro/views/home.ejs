@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<title>Cliosuite for MSME</title>
+
+</head>
+<style>
+.form-large{
+		    font-size: 25px;
+		    font-family:optima;
+		}
+	
+		.form-large .control-label{
+		    padding-top: 20px;
+		    padding-bottom: 20px;
+		    line-height: normal;
+		}
+	
+		.form-large input, .form-large  button, .form-large select{
+		    font-size: 25px;
+		    padding: 10px;
+		    height: 45px;
+		    line-height: normal;
+		}
+		
+		.datalist, .select {
+			font-size: 25px;
+			height: auto;
+	    	line-height: normal;
+			background-color: white;
+		}
+		
+
+div{
+	color:grey;
+	font-family:optima;
+}
+p{
+	color:grey;
+	font-family:optima;
+}
+
+  .footer_clio {
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    float: bottom;
+    text-align: center;
+  }
+  </style>
+<br/>
+<body style="background-color: white; background-image: url('/static/bg1.jpg');">
+  <div style="display: flex; justify-content: center; " >
+  <a href="/"><img src="/static/newlogo.jpg" style="width:250px; height:70px; border-color:yellow; border-width:2px;"/></a>
+  </div>
+  
+  <div class="container">
+  <div class="row justify-content-center">
+   <div class="col bg-default bg-default py-1" style="display: flex; justify-content: center; margin-bottom:0px;margin-left:0px;">
+  <h4><b>The One-Stop Solution for Micro, Small & Mid-Sized Enterprises</b></h4>
+  </div>
+  </div>
+  </div>
+ <br/>
+  <div class="card" style="width:100%; border-width:1px; background-color: #D1F2EB; border-color:#D1F2EB; border-radius:0px;" >
+    <div class="card-body">
+    
+    <div style="display: flex; justify-content: center; height:50px;background-color: #D1F2EB; border-color:#D1F2EB;" class="row-md-12">
+    
+    <button onclick="window.open('/documentation')" type="button" class="btn btn-link col-md-2"><font size="5">Docs</font></button>
+    <button onclick="window.open('https://cliosight.com/1000-ideas')" type="button" class="btn btn-link col-md-2"><font size="5">Blog</font></button>
+	<button onclick="window.location='#explore'" type="button" class="btn btn-link col-md-2"><font size="5">Explore</font></button>
+	<button onclick="window.open('/logout','_self')" type="button" class="btn btn-link col-md-2"><font size="5">Logout</font></button>
+	
+    </div>
+    </div>
+    </div>
+<br/>
+<br/>  
+<div class="container p-0" id="top">
+<div class="row" style="display: flex; justify-content: center;margin-left:0px; margin-right:0px;">
+	<div class="col-lg-11 bg-default" style="margin-bottom:10px;margin-top:10px;;">
+        <div class="card" style="border-color:white; border-width:2px; border-radius:10px;background-color: lightyellow; padding:30px;">
+            <div class="card-body">
+             <div class="row justify-content-center">
+                    <h1 style="display: flex; justify-content: center;color:grey;" id="fname">Hello, <%= first_name %></h1>
+               </div>     
+                    
+                    <h3 style="color:grey;">Thank you for showing interest.
+                    The application source code will be shared with you in a couple of days.
+                     Please feel free to contact us with any queries via "Submit a Query" link below regarding our services or the project. <br/><br/>
+                    <div class="row" style="display: flex; justify-content: center; " >
+					<div class="col-md-6">
+					<button  onclick="window.open('https://cliosight.com/#3191a9c5-da31-45fd-8916-8a3d0bb06317')" style=" width:100%; height:80px; border-color: white; border-width:1px;margin-right:0px;margin-top:10px;" class="btn btn-info btn-lg btn-block btn-huge"><font size="5"><b>SUBMIT A QUERY</b></font></button>
+					</div>
+					</div><br/><br/>
+					You may choose to schedule a meeting to discuss further: 
+                     <!-- Calendly link widget begin -->
+					<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+					<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+					<u><a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cliosight/60min'});return false;">Talk to Cliosight</a></u>
+					<!-- Calendly link widget end -->
+                    <br/>
+                    <br/>In the meantime, please explore our project documentation to understand where you might want to use a module in your application. You may write to us with your feedback as well.<br/>
+                    <br/>The survey below will help us in understanding your requirements better.
+                    </h3>
+                    </div><br/>
+                   </div> 
+            </div>
+        </div>
+</div>
+<br/>
+ <br/>                   
+<div class="container">   
+<div class="row" style="display: flex; justify-content: center;">                 
+	<p style="display: flex; justify-content: center;" class="col-lg-12 control-label"> <font color="grey" size="5"><b>Please complete this survey after going through the </b><button class="btn-link" onclick="window.open('/documentation')"><u>documentation</u></button></font></p>
+</div>
+
+<div class="row" style="display: flex; justify-content: center;">                 
+	<p style="display: flex; justify-content: center;" class="col-lg-12 control-label"> <font color="grey" size="5">Your registered email is <%= email %></p>
+</div> 
+  
+</div>
+
+<div class="container" style="display: flex; justify-content: center;">
+  
+  <div class="row" style="display: flex; justify-content: center;margin-left:0px; margin-right:0px;">
+	<div class="col-lg-11 bg-default bg-white" style="margin-bottom:10px;margin-top:10px;;">
+        <div class="card" style="border-color: lightgrey; border-width:0px; border-radius:10px;padding:20px;">
+            <div class="card-body">
+             <form method="POST" action="/survey" class="form-horizontal form-large">
+             <div class="form-group form-large">
+                      <h3 for="_email">Kindly re-enter your email below</h3>
+                      <input style="height:70px;" type="email" name="email" id="_email" class="form-control form-large" placeholder="Registered Email" required>
+               </div>
+               <div class="form-group form-large">
+                      <h3 for="_profession">What best describes your current work status?</h3>
+                           <select type="text" name="profession" id="_profession" class="form-control form-large" style="height:70px; border-color:lightgrey; font-size:25px; font-color:grey" value="<%= (locals.old_data) ? old_data.module : ''; %>" required>
+         					<option data-_profession="" value="" Selected>Your work status</option>
+         					<option data-_profession="prof_dev" value="prof_dev">Professional Developer</option>
+         					<option data-_profession="prof_dev_ue" value="prof_dev_ue" >Professional Developer Not Employed</option>
+         					<option data-_profession="os_dev" value="os_dev">Open-Source Contributor & Enthusiast</option>
+     						<option data-_profession="freelancer" value="freelancer">Freelance Developer</option>
+     						<option data-_profession="uiux" value="uiux">UI/UX Professional</option>
+     						<option data-_profession="business" value="business">Business Facing Professional</option>
+     						<option data-_profession="entrepreneur" value="entrepreneur">Entrepreneur</option>
+     						<option data-_profession="student" value="student">Student Developer</option>
+     						<option data-_profession="manager" value="manager">Hiring Manager</option>
+     						<option data-_profession="patron" value="patron">Open-source Patron</option>
+        					</select>
+                    </div>
+                    <div class="form-group form-large">
+                      <h3 for="_gender">Your Gender (women & selected others will receive a gift**)</h3>
+                           <select type="text" name="gender" id="_gender" class="form-control form-large" style="height:70px; border-color:lightgrey; font-size:25px; font-color:grey" value="<%= (locals.old_data) ? old_data.module : ''; %>" required>
+         					<option data-_gender="" value="" Selected>Your gender</option>
+         					<option data-_gender="male" value="male">Male</option>
+         					<option data-_gender="female" value="female" >Female</option>
+     						<option data-_gender="other" value="other">Other</option>
+     						<option data-_gender="mute" value="mute">Prefer not to say</option>
+        					</select>
+                    </div>
+                    <div class="form-group form-large">
+                      <h3 for="_module">Please choose the module that interests you the most</h3>
+                           <select type="text" name="module" id="_module" class="form-control form-large" style="height:70px; border-color:lightgrey; font-size:25px; font-color:grey" value="<%= (locals.old_data) ? old_data.module : ''; %>" required>
+         					<option data-_module="" value="" Selected>Choice of Module</option>
+         					<option data-_module="store" value="store">1. Entities, Order & Payments</option>
+     						<option data-_module="database" value="database">2. File and Data Management</option>
+     						<option data-_module="pricing" value="pricing">3. Pricing and Promotions</option>
+     						<option data-_module="logistics" value="logistics">4. Inventory & Logistics</option>
+     						<option data-_module="import" value="import">5. Product Import Tool</option>
+     						<option data-_module="webrtc" value="webrtc">6. WebRTC - Video calls, Chat, Chatbot</option>
+     						<option data-_module="marketing" value="marketing">7. Marketing - Social Media, Email, Influencer</option>
+     						<option data-_module="builder" value="builder">8. Form, Report and Page Builder</option>
+     						<option data-_module="nlp" value="nlp">9. Multimedia to Text Report Generation</option>
+     						<option data-_module="all" value="all">All of the above</option>
+     						<option data-_module="none" value="none">None</option>
+        					</select>
+                    </div>
+                    <div class="form-group form-large">
+                      <h3 for="_other_module">If none or more than one interest you, please mention those below in upto 100 characters</h3>
+                      <input style="height:70px;" type="text" name="other_module" id="_other_module" class="form-control form-large" placeholder="Please Specify">
+                    </div>
+                    <div class="form-group form-large">
+                    <h3 style="color:black">If you have technical skills, please answer the following 5 questions. </h3>
+                      <h3 for="_technologies">What tools or technologies do you use at work? (in upto 100 characters)</h3>
+                      <input style="height:70px;" type="text" name="technologies" id="_technologies" class="form-control form-large" placeholder="Please Specify" >
+                    </div>
+                    <div class="form-group form-large">
+                      <h3 for="_js">Do you have SQL, Javascript, HTML & CSS or other UI/UX skills? </h3>
+                           <select type="text" name="js" id="_js" class="form-control form-large" style="height:70px; border-color:lightgrey; font-size:25px; font-color:grey" value="<%= (locals.old_data) ? old_data.module : ''; %>" >
+         					<option data-_js="" value="" Selected>Your Response</option>
+         					<option data-_js="yes" value="yes">Yes</option>
+     						<option data-_js="no" value="no">No</option>
+     						<option data-_js="notsure" value="notsure">Not Sure</option>
+        					</select>
+                    </div>
+                    <div class="form-group form-large">
+                      <h3 for="_contribute">Are your looking to contribute or work in any other tech stack?</h3>
+                           <select type="text" name="contribute" id="_contribute" class="form-control form-large" style="height:70px; border-color:lightgrey; font-size:25px; font-color:grey" value="<%= (locals.old_data) ? old_data.module : ''; %>" >
+         					<option data-_contribute="" value="" Selected>Your Response</option>
+         					<option data-_contribute="yes" value="yes">Yes</option>
+     						<option data-_contribute="no" value="no">No</option>
+     						<option data-_contribute="notsure" value="notsure">Not Sure</option>
+        					</select>
+                    </div>
+                    <div class="form-group form-large">
+                      <h3 for="_other_tech_stack">If yes, what technologies would you like to use? (in upto 100 characters)</h3>
+                      <input style="height:70px;" type="text" name="other_tech_stack" id="_other_tech_stack" class="form-control form-large" placeholder="Please Specify">
+                    </div>
+                    <div class="form-group form-large">
+                      <h3 for="_devreq">Do you work on paid or open-source AI/ML/CV/AR applications?</h3>
+                           <select type="text" name="devreq" id="_devreq" class="form-control form-large" style="height:70px; border-color:lightgrey; font-size:25px; font-color:grey" value="<%= (locals.old_data) ? old_data.module : ''; %>" >
+         					<option data-_devreq="" value="" Selected>Your Response</option>
+         					<option data-_devreq="yes" value="yes">Yes</option>
+     						<option data-_devreq="no" value="no">No</option>
+     						<option data-_devreq="notsure" value="notsure">Not Sure</option>
+        					</select>
+                    </div>
+                    <div class="form-group form-large">
+                    <h3 style="color:black">If you are an entrepreneur or a business manager interested in enterprise software for your business or clients, please answer the following 3 questions.</h3>
+                      <h3 for="_comm">Do you intend to use this project for commercial purpose, after exploring it?</h3>
+                           <select type="text" name="comm" id="_comm" class="form-control form-large" style="height:70px; border-color:lightgrey; font-size:25px; font-color:grey" value="<%= (locals.old_data) ? old_data.module : ''; %>" >
+         					<option data-_comm="" value="" Selected>Your Response</option>
+         					<option data-_comm="yes" value="yes">Yes</option>
+     						<option data-_comm="no" value="no">No</option>
+     						<option data-_comm="notsure" value="notsure">Not Sure</option>
+        					</select>
+                    </div>
+                    <div class="form-group form-large">
+                      <h3 for="_pricing">Will you consider subscribing to our<button class="btn-link" onclick="window.open('https://cliosight.com/subscription-plans')" style="font-size:25px; height:20px;"><u>Paid Plans</u></button>after trial?</h3>
+                           <select type="text" name="pricing" id="_pricing" class="form-control form-large" style="height:70px; border-color:lightgrey; font-size:25px; font-color:grey" value="<%= (locals.old_data) ? old_data.module : ''; %>" >
+         					<option data-_pricing="" value="" Selected>Your Response</option>
+         					<option data-_pricing="yes" value="yes">Yes</option>
+     						<option data-_pricing="no" value="no">No</option>
+     						<option data-_pricing="notsure" value="notsure">Not Sure</option>
+        					</select>
+                    </div>
+                    <div class="form-group form-large">
+                      <h3 for="_other_pricing">If you wish to quote another price, please mention below specifying the currency</h3>
+                      <input style="height:70px;" type="text" name="other_pricing" id="_other_pricing" class="form-control form-large" placeholder="Please Specify" value="<%= (locals.old_data) ? old_data.module : ''; %>"  >
+                    </div>
+                    <div class="form-group form-large">
+                      <h3 for="_additional_feedback">Please provide any additional comments or feedback (in upto 200 characters)</h3>
+                      <textarea rows="3" type="text" name="additional_feedback" id="_additional_feedback" class="form-control form-large" placeholder="Your feedback" value="<%= (locals.old_data) ? old_data.module : ''; %>" ></textarea>
+                    </div> 
+                    
+                    <div class="row form-large" style="margin-top:25px;display: flex; justify-content: center;">
+                    <button onclick="getFields()" style="width:100%; padding:2px; height:75px;border-color: white; border-width:2px; display: fixed; justify-content: center;" type="submit" class="btn btn-info btn-lg btn-block btn-huge">SUBMIT SURVEY</button>
+                	</div>
+                	</form>
+                	<br/>
+                    <p style="width:100%; margin-top:10px;  display: fixed; justify-content: center; "><font size="5px" color="grey">**We need you to be based out of Bangalore, India for handing over the safe cosmetics gift in-person. Other location participants will get it couriered later.</font></button>
+                </div>
+            </div>
+        </div>
+	</div>
+  </div> 
+  </div>
+ 
+  <div class="row" style="justify-content:center;display: flex;">
+  <div class="col-md-2">
+		<a href="#top"><button class="btn btn-link" style="width:100%;"><font size="5" color="skyblue"><b>Top</b></font></button></a>
+  </div> 
+  </div>    
+</div>
+
+<br/>
+
+<div class="container" id="explore">
+
+<div class="row" style="display: flex; justify-content: center;">
+<p style="display: flex; justify-content: center;padding:10px;" class="col-lg-12 control-label"> <font color="#23bacf" size="7">Explore Cliosuite</font></p>
+</div>
+
+<div class="row-md-12" style="display: flex; justify-content: center;margin-bottom:0px;">
+<div class="card" style="border-color:skyblue; border-width:2px; border-radius:10px;background-color: #fffff5; padding:30px;">
+<div class="card-body">    
+       
+<div style="display: flex; justify-content: center;margin-bottom:0px;">
+<p style="display: flex; justify-content: center; font-weight:italic;" class="control-label"> <font color="#23bacf" size="6">ON DEMAND</font></p>
+</div>
+
+<div  style=";display: flex; justify-content: center;" class="row">
+
+<div class="col" style=";display: flex; justify-content: center;">
+	<button onclick="window.open('/prodsvc')" style="width:320px; height:100px; background-color:#4de3d3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b>Goods & Services</b></font></button>
+</div>
+
+<div class="col" style=";display: flex; justify-content: center;">
+<button onclick="window.open('/pripromos')" style="width:320px; height:100px; background-color:#4ddae3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b>Pricing & Promos</b></font></button>
+</div>
+
+<div class="col" style=";display: flex; justify-content: center;">
+<button onclick="window.open('/websupport')" style="width:320px; height:100px; background-color:#4de3d3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b>Calls & Orders</b></font></button>
+</div>
+</div>
+
+<div  style=";display: flex; justify-content: center;" class="row">
+<div class="col" style=";display: flex; justify-content: center;">
+<button onclick="window.open('/cliobuilder')" style="width:320px; height:100px; background-color:#4ddae3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b>Builder</b></font></button>
+</div>
+
+<div class="col" style=";display: flex; justify-content: center;">
+<button onclick="window.open('/invlog')" style="width:320px; height:100px; background-color:#4de3d3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b>Inventory</b></font></button>
+</div>
+
+<div class="col" style=";display: flex; justify-content: center;">
+<button onclick="window.open('/marketing')" style="width:320px; height:100px; background-color:#4ddae3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b>Marketing</b></font></button>
+</div>
+</div>
+
+<div  style=";display: flex; justify-content: center;" class="row">
+<div class="col" style=";display: flex; justify-content: center;">
+<button onclick="window.open('/stores')" style="width:320px; height:100px; background-color:#4de3d3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b>Store & FC</b></font></button>
+</div>
+
+<div class="col" style=";display: flex; justify-content: center;">
+<button onclick="window.open('/reports')" style="width:320px; height:100px; background-color:#4ddae3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b>Reports</b></font></button>
+</div>
+
+
+<div class="col" style=";display: flex; justify-content: center;">
+<button onclick="window.open('/files')" style="width:320px; height:100px; background-color:#4de3d3; border-color: yellow; border-width:1px; margin-bottom:10px;" class="btn btn-default btn-lg btn-block btn-huge"> <font color="white" size="5"><b>File & Data</b></font></button>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<br/>
+
+<div class="container">
+<div class="row" style="justify-content:center;display: flex;">
+  <div class="col-md-2">
+		<a href="#top"><button class="btn btn-link" style="width:100%;"><font size="5" color="skyblue"><b>Top</b></font></button></a>
+  </div> 
+  </div>  
+</div>
+<br/>
+
+<div class="footer_clio row" id="footer_clio" name="footer_clio" style="display: flex; justify-content: center; background-color: #D1F2EB;margin-left:0px;margin-right:0px;padding-top:20px;padding-bottom:20px;">
+
+<div class="col-md-3">
+<h3>Social Media</h3>
+<h4><a href="http://cliosight.com">Company Website</a></h4>
+<h4><a href="https://www.linkedin.com/company/14571342">Linkedin</a></h4>
+
+</div>
+<div class="col-md-3">
+<h3>Learn about the product</h3>
+<h4><a href="/documentation">Documentation</a></h4>
+<h4><a href="https://cliosight.com/cliosuite-articles-1">Cliosuite Articles</a></h4>
+</div>
+<div class="col-md-4">
+<h3>Contact Us</h3>
+<h4>Mobile: +91-6361789254</h4>
+<h4><a>cliosight@gmail.com</a></h4>
+<h4>Address: Bangalore-560076, Karnataka, India</h4>
+</div>
+</div>
+<br/>
+
+</div>      
+</div>
+  
+  <div class="footer_clio" id="footer_clio" name="footer_clio" style="display: flex; justify-content: center; ">
+    <button type="button" class="btn btn-link" onclick="window.open('/about')"><font size="4">About</font></button>
+    <button type="button" class="btn btn-link" onclick="window.open('/policies')"><font size="4"> Policies & Terms </font></button>
+    <br/>
+  </div>
+  
+  <div class="container" style="display: flex; justify-content: center; ">
+      <p><font size="4" color="grey">Copyright © 2020 Cliosight - All Rights Reserved.</font></p>
+    </div> 
+     
+  <br/>
+</body>
+</html>
