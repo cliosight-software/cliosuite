@@ -12,7 +12,7 @@ Instead of creating a single application for both our main project and the intro
 keep it seperate, and collect survey data and other information from the users exclusively through this simple web application.
 
 The main project source code will be shared later, once we have reached a particular count of interested users.
-Please donate to help us complete this significantly large project that will smoothen the lives of student developers, professional developers, freelancers, business consultants and MSMEs sail through the pandemic.
+Please donate to help us complete this significantly large project that will smoothen the lives of student developers, professional developers, freelancers, business consultants and MSMEs and help them sail through the pandemic.
 Please visit our website https://cliosight.com for more.
 
 Indian Patrons, click the project logo below to donate:
