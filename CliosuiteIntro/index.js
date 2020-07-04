@@ -14,7 +14,7 @@ app.use('/static', express.static('public'))
 
 app.use(cookieSession({
     name: 'session',
-    keys: ['key1', 'key2'],
+    keys: ['key1', 'key2','key3','key4'],
     maxAge:  3600 * 1000 // 1 hr.
 }));
 
