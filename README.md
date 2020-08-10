@@ -11,7 +11,7 @@ to create a product introduction and registration web app, adopted from the arti
 Instead of creating a single application for both our main project and the introduction part, we have decided to 
 keep it seperate, and collect survey data and other information from the users exclusively through this simple web application.
 
-This is deployed into the free tier of GCP App engine and uses Cloud SQL for MySQL database: https://cliosuite-intro.el.r.appspot.com/
+This is deployed into the free tier of GCP App engine and uses Cloud SQL for MySQL database: https://smooth-concept-282010.ue.r.appspot.com/
 
 The main project source code will be shared later, once we have reached a particular count of interested users.
 Please donate to help us complete this significantly large project that will smoothen the lives of student developers, professional developers, freelancers, business consultants and MSMEs and help them sail through the pandemic.
