@@ -1,6 +1,6 @@
 ## Author: Jigisha Aryya, email: cliosight@gmail.com, website: https://cliosight.com
 ## Please install python and mysql and create the database manually before using this script. You can modify this for a different use case
-## Blog: https://cliosight.com/f/scrapping-web-data-with-python-for-your-ideas-and-experiments
+## Blog: https://cliosight.com/f/scraping-web-data-with-python-for-your-ideas-and-experiments
 
 import re
 from bs4 import BeautifulSoup as BeautifulSoup
